@@ -1,0 +1,19 @@
+{
+  "name": "minhaia",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.20.2",
+    "easygpt": "^1.5.0",
+    "express": "^4.18.2",
+    "fs": "^0.0.1-security",
+    "pdf-parse": "^1.1.1"
+  }
+}

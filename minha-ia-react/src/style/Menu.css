@@ -1,0 +1,14 @@
+.menu {
+    height: 100%;
+    background-color: #fff;
+    border-right: 1px solid #ccc;
+}
+
+.menu-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 200px;
+    z-index: 1;
+}
