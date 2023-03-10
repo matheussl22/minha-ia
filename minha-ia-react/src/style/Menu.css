@@ -2,11 +2,14 @@
     height: 100%;
     background-color: #fff;
     border-right: 1px solid #ccc;
+    color: #fff;
+    background-color: #222;
+    padding: 20px;
 }
 
 .menu-container {
     position: fixed;
-    top: 0;
+    top: 0px;
     left: 0;
     bottom: 0;
     width: 200px;

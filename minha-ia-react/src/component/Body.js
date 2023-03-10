@@ -7,10 +7,10 @@ class Body extends React.Component {
         return (
             <div className="page-content">
                <Chat/>
-                <div>
-                    <h1>Upload de Arquivo</h1>
-                    <FileUploader />
-                </div>
+                {/*<div>*/}
+                {/*    <h1>Upload de Arquivo</h1>*/}
+                {/*    <FileUploader />*/}
+                {/*</div>*/}
             </div>
         );
     }

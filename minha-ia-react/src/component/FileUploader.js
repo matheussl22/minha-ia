@@ -1,15 +1,13 @@
 import React, { useCallback } from 'react';
 import { useDropzone } from 'react-dropzone';
-
 function FileUploader(props) {
-    const onDrop = useCallback((acceptedFiles) => {
+    const onDrop = useCallback(async (acceptedFiles) => {
         const file = acceptedFiles[0];
         const reader = new FileReader();
-        reader.readAsText(file);
-        reader.onload = () => {
+        reader.readAsArrayBuffer(file);
+
+        reader.onload = async () => {
             const fileContents = reader.result;
-            // const minhaStringEncoded = encodeURIComponent(fileContents);
-            // const base64pdf = btoa(minhaStringEncoded);
             let dataForm = {content: fileContents};
 
             console.log(dataForm);

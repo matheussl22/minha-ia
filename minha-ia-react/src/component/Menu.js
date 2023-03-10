@@ -6,7 +6,13 @@ class Menu extends React.Component {
         return (
             <div className="menu-container">
                 <div className="menu">
-                    {/* Conteúdo do menu aqui */}
+                    <a href="#">CONVERSA 1</a><br />
+                    <a href="#">CONVERSA 2</a><br />
+                    <a href="#">CONVERSA 4</a><br />
+                    <a href="#">CONVERSA 5</a><br />
+                    <a href="#">CONVERSA 6</a><br />
+
+                    <button>Sair</button><br />
                 </div>
             </div>
         );
