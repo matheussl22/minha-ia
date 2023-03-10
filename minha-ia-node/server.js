@@ -21,6 +21,7 @@ app.listen(PORT, () => {
 import EasyGPT from "easygpt";
 const gpt = new EasyGPT();
 gpt.addRule('Não responda nada até que eu pergunte de fato, agora é só pra ensinar vc!');
+gpt.addRule('Vc deve conversar sempre em cima dos dados que eu te ensinar!');
 gpt.setApiKey("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");
 
 app.get('/ask/:message', (req, res) => {
@@ -38,16 +39,13 @@ app.get('/ask/:message', (req, res) => {
 });
 
 let text = ''; // variável para armazenar o texto extraído
-new PdfReader().parseFileItems('./pdfs/IN-14-Bombeiro-2.pdf', function(err, item) {
+new PdfReader().parseFileItems('./pdfs/florida.pdf', function(err, item) {
     if (err) {
         console.log(err);
     } else if (!item) {
-        // fim do arquivo PDF
-
-        console.log(text);
-
         //ENVIAR PARA O GPT
-        gpt.addMessage(text);
+        console.log('ENVIANDO PARA O GPT');
+        gpt.addMessage(text).ask();
     } else if (item.text) {
         // item de texto encontrado
         text += item.text;
