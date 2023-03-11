@@ -20,8 +20,7 @@ app.listen(PORT, () => {
 
 import EasyGPT from "easygpt";
 const gpt = new EasyGPT();
-gpt.addRule('Não responda nada até que eu pergunte de fato, agora é só pra ensinar vc!');
-gpt.addRule('Vc deve conversar sempre em cima dos dados que eu te ensinar!');
+gpt.addRule('Vc deve conversar com base nos dados enviados!');
 gpt.setApiKey("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");
 
 app.get('/ask/:message', (req, res) => {
